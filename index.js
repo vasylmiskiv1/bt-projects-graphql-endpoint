@@ -15,15 +15,6 @@ connectDB();
 
 app.use(cors());
 
-{
-/* for SSR
-  const __rootdir = path.resolve();
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__rootdir, "client", "build", "index.html"));
-  });
-*/
-}
-
 app.use(
   "/graphql",
   graphqlHTTP({
